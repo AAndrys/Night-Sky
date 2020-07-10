@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-a11y="true"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <title>Night Sky</title>
+</head>
+<body>
+    <div class="container">
+        <div class="leftMenu transformStyleClose">
+            <div class="rightIcon">></div>
+            <div class="options-box">
+                <form>
+                    <label for="starsValue">Ilość gwiazd</label>
+                    <input type="range" id="volStars" name="vol" min="0" max="1000">
+                    <p id="inputValueNumber"></p>
+                </form>
+                <button id="exit"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="moon"></div>
+            <div class="forest">
+                <img src="./images/forest.png" alt="forest">
+            </div>
+        </div>
+    </div>
+    <script src="js/javascript.js" ></script>
+</body>
+</html>

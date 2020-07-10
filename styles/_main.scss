@@ -1,0 +1,143 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    user-select: none;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#111425, #3751e0);
+    background-attachment: fixed;
+    overflow: hidden;
+    position: relative;
+    .leftMenu {
+        width: 30%;
+        min-width: 300px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        background-color: #3751e0;
+        z-index: 1005;
+        transition: all .4s linear;
+        .rightIcon {
+            width: 50px;
+            height: 80px;
+            position: absolute;
+            top: 5%;
+            right: -50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 30px;
+            background-color: #3751e0;           
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            cursor: pointer;
+        }
+        .options-box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            form {
+                width: 95%;
+            }
+            #exit {
+                width: 5%;
+                height: 30px;
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                color: white;
+                margin-top: 10px;
+                margin-right: 10px;
+                border: none;
+                position: relative;
+                z-index: 1006;
+                background-color: transparent;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .stars {
+        position: absolute;
+        opacity: 0;
+        background-color: white;
+        box-shadow: 0px 0px 10px white;
+        animation: starMove linear infinite;
+    }
+    .moon {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 100px;
+        right: 20%;
+        z-index: 1000;
+        background-color: lightgrey;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px white;
+    }
+    .forest {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        z-index: 1001;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.transformStyleOpen {
+    transform: translateX(0);
+}
+.transformStyleClose {
+    transform: translateX(-100%);
+}
+/////////////////////////////
+@keyframes starMove {
+    0% {
+        opacity: 0;
+        transform: translateY(0) rotate(45deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) rotate(180deg);
+    }
+}
+//////////////
+@media (max-width: 650px) {
+    .content {
+        .moon {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
