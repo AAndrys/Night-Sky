@@ -68,6 +68,7 @@ const generateStars = (value) => {
             newStar.addEventListener('click', () => {
                 window.removeEventListener('click', closeStarWindow);
                 newDiv.style.opacity = 1;
+                newDiv.style.visibility = 'visible';
                 console.log('click');
                 setTimeout(() => {
                     window.addEventListener('click', closeStarWindow)
@@ -113,11 +114,11 @@ checkBox.addEventListener('click', () => {
 });
 
 const closeStarWindow = (e) => {
-    console.log(e.target);
+    // console.log(e.target);
     const divSelector = document.querySelectorAll('.starWindow');
     for (let k = 0; k < divSelector.length; k++) {
-        console.log(divSelector[k].style.opacity)
         divSelector[k].style.opacity = 0;
+        divSelector[k].style.visibility = '';
     }
 }
 

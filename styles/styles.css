@@ -219,6 +219,7 @@ body {
   height: auto;
   min-height: 30px;
   opacity: 0;
+  visibility: hidden;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
